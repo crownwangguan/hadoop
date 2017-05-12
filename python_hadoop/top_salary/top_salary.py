@@ -10,7 +10,6 @@ class salarymax(MRJob):
 		# Convert each line into a dictionary
 		row = dict(zip(cols, [ a.strip() for a in csv.reader([line]).next()]))
 		# Yield the salary
-		print row['AnnualSalary'][1:]
 		yield 'salary', (float(row['AnnualSalary'][1:]), line)
 
 		# yield gross pay
